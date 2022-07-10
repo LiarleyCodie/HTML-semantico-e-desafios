@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <style>
+        form fieldset label {
+            font-weight: 700;
+            display: block;
+            margin-top: 1rem;
+        }
+
+        form fieldset input {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Entre em contato</legend>
+
+            <label style="display: inline;" for="assunto">Assunto:</label>
+            <select id="assunto">
+                <option value="">Suporte</option>
+                <option value="">Sugestão</option>
+                <option value="">Reclamação</option>
+            </select>
+
+            <label for="nomeCompleto">Nome Completo:</label>
+            <input type="text" id="nomeCompleto" placeholder="Seu nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" placeholder="email@seudominio.com" id="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea style="display: block;" id="message" cols="30" rows="10" required></textarea>
+
+            <input style="display: inline; margin-top: 1rem;" type="checkbox" id="checkbox">
+            <label style="display: inline;" for="checkbox">Aceito receber novidades por e-mail</label>
+
+            <input style="margin-top: 1rem;" type="submit" value="Enviar">
+        </fieldset>
+    </form>
+</body>
+
+</html>

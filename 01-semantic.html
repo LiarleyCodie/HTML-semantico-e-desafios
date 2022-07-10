@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-rows: 1fr 4fr 1fr;
+        }
+
+        header,
+        nav,
+        section,
+        aside,
+        footer {
+            border: 1px solid black;
+        }
+
+        .header {
+            grid-column: 1/3;
+            grid-row: 1/2;
+            background: lightgoldenrodyellow;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header h1 {
+            display: grid;
+            place-items: center;
+            height: 100%;
+        }
+
+        .header nav {
+            background-color: lightslategrey;
+            width: 100%;
+            height: 3rem;
+        }
+
+        .header nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .header nav ul li {
+            list-style-type: none;
+            margin: 0 1rem;
+            height: 100%;
+
+        }
+
+        .header nav ul li a {
+            display: grid;
+            place-items: center;
+            height: 100%;
+            padding: 0 1rem;
+            font-weight: 700;
+        }
+
+        .section {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            padding: 1rem;
+        }
+
+        .section article {
+            background: lightblue;
+            margin-bottom: 2rem;
+            padding: 1rem;
+        }
+
+        .section article header {
+            background: lightgoldenrodyellow;
+            text-align: center;
+            margin-bottom: 0.4rem;
+        }
+
+        .section article section {
+            background: lightslategray;
+            padding: 0.4rem;
+        }
+
+        .section article footer {
+            background: lightsalmon;
+            text-align: center;
+            padding: 0.4rem 0;
+        }
+
+        .aside {
+            background: lightslategray;
+            grid-row: 2/3;
+            grid-column: 2/3;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .aside ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .aside ul li {
+            list-style-type: none;
+        }
+
+        .aside ul li a {
+            display: block;
+            padding: 0.4rem;
+        }
+
+        .footer {
+            display: grid;
+            place-items: center;
+            background: lightgoldenrodyellow;
+            grid-column: 1/3;
+            grid-row: 3/4;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Main Header</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="section">
+        <article>
+            <header>
+                <h1>Article 1</h1>
+            </header>
+            <section>
+                <p>Section 1</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, nobis.</p>
+            </section>
+            <footer>
+                <p>Footer 1</p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h1>Article 2</h1>
+            </header>
+            <section>
+                <p>Section 2</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, voluptates.</p>
+            </section>
+            <footer>
+                <p>Footer 2</p>
+            </footer>
+        </article>
+    </section>
+
+    <aside class="aside">
+        <p>Aside</p>
+        <ul>
+            <li>
+                <a href="#">Item 01</a>
+            </li>
+            <li>
+                <a href="#">Item 02</a>
+            </li>
+            <li>
+                <a href="#">Item 03</a>
+            </li>
+            <li>
+                <a href="#">Item 04</a>
+            </li>
+            <li>
+                <a href="#">Item 05</a>
+            </li>
+        </ul>
+    </aside>
+
+    <footer class="footer">
+        <p>Main Footer</p>
+    </footer>
+</body>
+
+</html>
